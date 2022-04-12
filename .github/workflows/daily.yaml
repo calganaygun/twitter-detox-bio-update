@@ -1,0 +1,21 @@
+name: Update bio daily
+on:
+  schedule:
+    - cron: "30 20 * * *"
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+    - run: npm install
+    - name: Run script
+      env:
+        TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+        TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+        TWITTER_ACCESS_KEY: ${{ secrets.TWITTER_ACCESS_KEY }}
+        TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+      run: node index.js

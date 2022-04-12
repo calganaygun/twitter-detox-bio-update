@@ -1,0 +1,23 @@
+{
+  "name": "twitter-detox-bio-update",
+  "version": "1.0.0",
+  "description": "Updates my twitter bio daily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calganaygun/twitter-detox-bio-update.git"
+  },
+  "author": "calgan@calganaygun.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calganaygun/twitter-detox-bio-update/issues"
+  },
+  "homepage": "https://github.com/calganaygun/twitter-detox-bio-update#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "twitter": "^1.7.1"
+  }
+}
